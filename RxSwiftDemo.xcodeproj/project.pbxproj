@@ -15,6 +15,8 @@
 		5A9280F51D5B1D8B002D9BB8 /* RxSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9280F41D5B1D8B002D9BB8 /* RxSwiftDemoTests.swift */; };
 		5A9281001D5B1D8B002D9BB8 /* RxSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9280FF1D5B1D8B002D9BB8 /* RxSwiftDemoUITests.swift */; };
 		5A92810F1D5B1FC7002D9BB8 /* RXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */; };
+		5A9281111D5B29BA002D9BB8 /* RXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */; };
+		5A9281131D5B2A95002D9BB8 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */; };
 		C85A5BFF77BC6059623F67CC /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3FB538C9833C8E2A6983FE /* Pods_RxSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		5A9280FF1D5B1D8B002D9BB8 /* RxSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		5A9281011D5B1D8B002D9BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXTableViewController.swift; sourceTree = "<group>"; };
+		5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXTableViewCell.swift; sourceTree = "<group>"; };
+		5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
 		F3D80C9DC650B1BAA77E96E6 /* Pods-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */,
+				5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */,
+				5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */,
 			);
 			name = TableViewTest;
 			sourceTree = "<group>";
@@ -343,6 +349,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9280E21D5B1D8B002D9BB8 /* ViewController.swift in Sources */,
+				5A9281111D5B29BA002D9BB8 /* RXTableViewCell.swift in Sources */,
+				5A9281131D5B2A95002D9BB8 /* RxViewModel.swift in Sources */,
 				5A9280E01D5B1D8B002D9BB8 /* AppDelegate.swift in Sources */,
 				5A92810F1D5B1FC7002D9BB8 /* RXTableViewController.swift in Sources */,
 			);

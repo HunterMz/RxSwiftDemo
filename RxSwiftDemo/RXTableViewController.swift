@@ -8,15 +8,40 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxDataSources
 
 
 /// 此类主要功能为： 使用RxSwift 实现 TableView
-class RXTableViewController: UITableViewController {
+class RXTableViewController: UIViewController {
 
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, User>>()
+
+    
+    let tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: .Plain)
+    let reuseIdentifier = "\(RxTableViewCell.self)"
+    
+    
+    let viewModel = RxViewModel()
+    let disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+        view.addSubview(tableView)
+        tableView.registerClass(RxTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
+        dataSource.configureCell = {
+            _, tableView, indexPath, user in
+            let cell = tableView.dequeueReusableCellWithIdentifier(self.reuseIdentifier, forIndexPath: indexPath) as! RxTableViewCell
+            cell.tag = indexPath.row
+            cell.user = user
+            return cell
+        }
+        
+        viewModel.getUsers()
+            .bindTo(tableView.rx_itemsWithDataSource(dataSource))
+            .addDisposableTo(disposeBag)
     }
 }
