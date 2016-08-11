@@ -17,6 +17,9 @@
 		5A92810F1D5B1FC7002D9BB8 /* RXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */; };
 		5A9281111D5B29BA002D9BB8 /* RXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */; };
 		5A9281131D5B2A95002D9BB8 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */; };
+		5A9281161D5B30A0002D9BB8 /* RxTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281151D5B30A0002D9BB8 /* RxTableViewController2.swift */; };
+		5A9281181D5B336C002D9BB8 /* BasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281171D5B336C002D9BB8 /* BasicModel.swift */; };
+		5A92811A1D5B348F002D9BB8 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9281191D5B348F002D9BB8 /* BasicTableViewCell.swift */; };
 		C85A5BFF77BC6059623F67CC /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3FB538C9833C8E2A6983FE /* Pods_RxSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXTableViewController.swift; sourceTree = "<group>"; };
 		5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXTableViewCell.swift; sourceTree = "<group>"; };
 		5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
+		5A9281151D5B30A0002D9BB8 /* RxTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController2.swift; sourceTree = "<group>"; };
+		5A9281171D5B336C002D9BB8 /* BasicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicModel.swift; sourceTree = "<group>"; };
+		5A9281191D5B348F002D9BB8 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		F3D80C9DC650B1BAA77E96E6 /* Pods-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +124,8 @@
 		5A9280DE1D5B1D8B002D9BB8 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5A92810D1D5B1F7F002D9BB8 /* TableViewTest */,
+				5A9281141D5B300E002D9BB8 /* TableViewTest2 */,
+				5A92810D1D5B1F7F002D9BB8 /* TableViewTest1 */,
 				5A9280DF1D5B1D8B002D9BB8 /* AppDelegate.swift */,
 				5A9280E11D5B1D8B002D9BB8 /* ViewController.swift */,
 				5A9280E31D5B1D8B002D9BB8 /* Main.storyboard */,
@@ -147,14 +154,24 @@
 			path = RxSwiftDemoUITests;
 			sourceTree = "<group>";
 		};
-		5A92810D1D5B1F7F002D9BB8 /* TableViewTest */ = {
+		5A92810D1D5B1F7F002D9BB8 /* TableViewTest1 */ = {
 			isa = PBXGroup;
 			children = (
 				5A92810E1D5B1FC7002D9BB8 /* RXTableViewController.swift */,
 				5A9281101D5B29BA002D9BB8 /* RXTableViewCell.swift */,
 				5A9281121D5B2A95002D9BB8 /* RxViewModel.swift */,
 			);
-			name = TableViewTest;
+			name = TableViewTest1;
+			sourceTree = "<group>";
+		};
+		5A9281141D5B300E002D9BB8 /* TableViewTest2 */ = {
+			isa = PBXGroup;
+			children = (
+				5A9281151D5B30A0002D9BB8 /* RxTableViewController2.swift */,
+				5A9281171D5B336C002D9BB8 /* BasicModel.swift */,
+				5A9281191D5B348F002D9BB8 /* BasicTableViewCell.swift */,
+			);
+			name = TableViewTest2;
 			sourceTree = "<group>";
 		};
 		F6C32CC16E312467EE25C3F5 /* Pods */ = {
@@ -348,10 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A92811A1D5B348F002D9BB8 /* BasicTableViewCell.swift in Sources */,
 				5A9280E21D5B1D8B002D9BB8 /* ViewController.swift in Sources */,
 				5A9281111D5B29BA002D9BB8 /* RXTableViewCell.swift in Sources */,
 				5A9281131D5B2A95002D9BB8 /* RxViewModel.swift in Sources */,
 				5A9280E01D5B1D8B002D9BB8 /* AppDelegate.swift in Sources */,
+				5A9281161D5B30A0002D9BB8 /* RxTableViewController2.swift in Sources */,
+				5A9281181D5B336C002D9BB8 /* BasicModel.swift in Sources */,
 				5A92810F1D5B1FC7002D9BB8 /* RXTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

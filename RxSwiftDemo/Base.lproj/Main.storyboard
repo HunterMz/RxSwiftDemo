@@ -18,16 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYV-Is-6Ef">
-                                <rect key="frame" x="270" y="285" width="60" height="30"/>
-                                <state key="normal" title="显示列表"/>
+                                <rect key="frame" x="263" y="285" width="75" height="30"/>
+                                <state key="normal" title="第一种方法"/>
                                 <connections>
                                     <segue destination="eWG-fC-srF" kind="show" id="fEe-yd-y9F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-Ke-t5b">
+                                <rect key="frame" x="263" y="346" width="75" height="30"/>
+                                <state key="normal" title="第二种方法"/>
+                                <connections>
+                                    <segue destination="2Ap-xv-eGv" kind="show" id="0Pw-BN-QKz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WYV-Is-6Ef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4kU-id-pR3"/>
+                            <constraint firstItem="4Dl-Ke-t5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQI-ZK-TGy"/>
+                            <constraint firstItem="4Dl-Ke-t5b" firstAttribute="top" secondItem="WYV-Is-6Ef" secondAttribute="bottom" constant="31" id="xTF-a8-5Fy"/>
                             <constraint firstItem="WYV-Is-6Ef" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y9z-gK-xhC"/>
                         </constraints>
                     </view>
@@ -36,6 +45,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="383"/>
+        </scene>
+        <!--Rx Table View Controller2-->
+        <scene sceneID="98l-vP-8wH">
+            <objects>
+                <tableViewController storyboardIdentifier="RxTableViewController2" id="2Ap-xv-eGv" customClass="RxTableViewController2" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9wc-t1-yRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BasicCell" selectionStyle="default" indentationWidth="10" id="RYV-VI-fwh" customClass="BasicTableViewCell" customModule="RxSwiftDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RYV-VI-fwh" id="hy0-q9-h0P">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Ap-xv-eGv" id="LAK-md-YOd"/>
+                            <outlet property="delegate" destination="2Ap-xv-eGv" id="8fI-5T-RKz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hw-SI-gS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="689"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="O80-Al-QcT">
@@ -53,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzw-be-VDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="383"/>
+            <point key="canvasLocation" x="1760" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J9U-0T-Ghc">
