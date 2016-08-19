@@ -124,10 +124,8 @@
 		5A9280DE1D5B1D8B002D9BB8 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5A9281141D5B300E002D9BB8 /* TableViewTest2 */,
-				5A92810D1D5B1F7F002D9BB8 /* TableViewTest1 */,
+				5AE46D0A1D65504200C07483 /* TableView */,
 				5A9280DF1D5B1D8B002D9BB8 /* AppDelegate.swift */,
-				5A9280E11D5B1D8B002D9BB8 /* ViewController.swift */,
 				5A9280E31D5B1D8B002D9BB8 /* Main.storyboard */,
 				5A9280E61D5B1D8B002D9BB8 /* Assets.xcassets */,
 				5A9280E81D5B1D8B002D9BB8 /* LaunchScreen.storyboard */,
@@ -172,6 +170,24 @@
 				5A9281191D5B348F002D9BB8 /* BasicTableViewCell.swift */,
 			);
 			name = TableViewTest2;
+			sourceTree = "<group>";
+		};
+		5AE46D0A1D65504200C07483 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				5AE46D0D1D655EB200C07483 /* Operators */,
+				5A9281141D5B300E002D9BB8 /* TableViewTest2 */,
+				5A92810D1D5B1F7F002D9BB8 /* TableViewTest1 */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		5AE46D0D1D655EB200C07483 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				5A9280E11D5B1D8B002D9BB8 /* ViewController.swift */,
+			);
+			name = Operators;
 			sourceTree = "<group>";
 		};
 		F6C32CC16E312467EE25C3F5 /* Pods */ = {
