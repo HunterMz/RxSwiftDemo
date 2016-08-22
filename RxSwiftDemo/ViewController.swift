@@ -10,17 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class OperatorsViewController: UIViewController {
 
+    @IBOutlet weak var firstTextfield: UITextField!
+    
+    @IBOutlet weak var secondTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        reduceTest()
+        combineLatest()
     }
 }
 
 // MARK: - Operators
-extension ViewController {
+extension OperatorsViewController {
     
     func example(description: String, @noescape action: Void -> Void) {
         printExampleHeader(description)
@@ -315,6 +319,14 @@ extension ViewController {
                 .subscribe {
                     print($0)
             }.addDisposableTo(disposeBag)
+        }
+    }
+    
+    func combineLatest() {
+        let firstObserverable = firstTextfield.rx_text.map({"first" + $0})
+        let secondObserverable = secondTextfield.rx_text.filter({$0.characters.count > 3})
+        _ =  Observable.combineLatest(firstObserverable, secondObserverable, resultSelector:{ ($0 + $1,$0.characters.count + $1.characters.count)}).subscribeNext { (element) in
+            print("combineLatest:\(element)")
         }
     }
 }
