@@ -46,6 +46,13 @@ class RxTableViewController2: UITableViewController {
         
             }.addDisposableTo(disposeBag)
     
+        tableView
+            .rx_contentOffset
+            .map { (contenOffset) -> String in
+                return "contentOffset.y = \(contenOffset.y)"
+            }
+            .bindTo(self.rx_title)
+            .addDisposableTo(disposeBag)
     }
 }
 struct Alert {

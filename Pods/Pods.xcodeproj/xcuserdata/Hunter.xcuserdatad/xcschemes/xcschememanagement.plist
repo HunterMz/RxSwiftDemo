@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RxSwiftDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxAlamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Then.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>091584CD17FE2776E79950FBC7B73E35</key>
+		<key>2504D0F66B24E57B2F789906CC83523C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AC3648B93EB1C99380BE3553B7ADCDD</key>
+		<key>502DD0201B17507DE67F6EAA6510E0AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A65C7184AB01BB934013D47A798AC978</key>
+		<key>55F4FBA0A47479F5D2F5F1097196F6DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7ADB022E4401AA562F82F7283F9387F</key>
+		<key>6ECC1AFEF69378AA4F4957CBA2080BCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D75271946E3C7E254E2BD1B950E4259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A8D0D63BABCBBE072BC911F4CEE73B0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

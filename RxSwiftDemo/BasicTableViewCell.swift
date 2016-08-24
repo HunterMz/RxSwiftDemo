@@ -10,20 +10,15 @@ import UIKit
 
 class BasicTableViewCell: UITableViewCell {
     
-
-//    @IBOutlet weak var nameLabel: UILabel!
-//    
-//    @IBOutlet weak var ageLabel: UILabel!
     
-    var nameLabel: UILabel = UILabel(frame: CGRect(x: 20,y: 5,width: 50,height: 20))
-    var ageLabel: UILabel = UILabel(frame: CGRect(x: 200,y: 5,width: 50,height: 20))
+    let nameLabel: UILabel = UILabel(frame: CGRect(x: 20,y: 5,width: 50,height: 20))
+    let ageLabel: UILabel = UILabel(frame: CGRect(x: 200,y: 5,width: 50,height: 20))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.contentView.addSubview(nameLabel)
         self.contentView.addSubview(ageLabel)
-        
         
     }
     

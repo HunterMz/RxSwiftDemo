@@ -5,4 +5,6 @@ target 'RxSwiftDemo' do
   pod 'RxSwift', '~> 2.6.0'
   pod 'RxCocoa', '~> 2.6.0'
   pod 'RxDataSources', '~> 0.9'
+  pod 'RxAlamofire'
+  pod 'Then'
 end

@@ -43,5 +43,12 @@ class RXTableViewController: UIViewController {
         viewModel.getUsers()
             .bindTo(tableView.rx_itemsWithDataSource(dataSource))
             .addDisposableTo(disposeBag)
+        
+        tableView
+            .rx_contentOffset
+            .map {$0.y}
+            .subscribeNext { [unowned self] in
+                self.title = "contenOffset.y = \($0)"
+            }.addDisposableTo(disposeBag)
     }
 }
