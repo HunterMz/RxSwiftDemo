@@ -11,6 +11,8 @@
 		5A627B741D6EA165002ADCE7 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A627B731D6EA165002ADCE7 /* Observable+ObjectMapper.swift */; };
 		5A627B761D6EA9D6002ADCE7 /* RequestObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A627B751D6EA9D6002ADCE7 /* RequestObjectMapper.swift */; };
 		5A627B781D6EAB77002ADCE7 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A627B771D6EAB77002ADCE7 /* UserTableViewCell.swift */; };
+		5A627B7C1D6EDD2D002ADCE7 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A627B7B1D6EDD2D002ADCE7 /* UserAPI.swift */; };
+		5A627B801D6EE151002ADCE7 /* MoyaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A627B7F1D6EE151002ADCE7 /* MoyaTableViewController.swift */; };
 		5A887A3D1D6AA22900A0150D /* UITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A887A3C1D6AA22900A0150D /* UITestViewController.swift */; };
 		5A887A401D6C5C9900A0150D /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A887A3F1D6C5C9900A0150D /* AlamofireViewController.swift */; };
 		5A887A431D6D9E0E00A0150D /* SectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A887A421D6D9E0E00A0150D /* SectionsModel.swift */; };
@@ -57,6 +59,8 @@
 		5A627B731D6EA165002ADCE7 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		5A627B751D6EA9D6002ADCE7 /* RequestObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestObjectMapper.swift; sourceTree = "<group>"; };
 		5A627B771D6EAB77002ADCE7 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		5A627B7B1D6EDD2D002ADCE7 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		5A627B7F1D6EE151002ADCE7 /* MoyaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTableViewController.swift; sourceTree = "<group>"; };
 		5A887A3C1D6AA22900A0150D /* UITestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestViewController.swift; sourceTree = "<group>"; };
 		5A887A3F1D6C5C9900A0150D /* AlamofireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		5A887A421D6D9E0E00A0150D /* SectionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsModel.swift; sourceTree = "<group>"; };
@@ -119,15 +123,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A887A3E1D6C51BA00A0150D /* NetWorking */ = {
+		5A627B791D6EDCFB002ADCE7 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
 				5A887A3F1D6C5C9900A0150D /* AlamofireViewController.swift */,
-				5A627B771D6EAB77002ADCE7 /* UserTableViewCell.swift */,
+			);
+			name = Alamofire;
+			sourceTree = "<group>";
+		};
+		5A627B7A1D6EDD14002ADCE7 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				5A627B7B1D6EDD2D002ADCE7 /* UserAPI.swift */,
+				5A627B7F1D6EE151002ADCE7 /* MoyaTableViewController.swift */,
+			);
+			name = Moya;
+			sourceTree = "<group>";
+		};
+		5A627B811D6EEC14002ADCE7 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
 				5A887A481D6E962A00A0150D /* UserModel.swift */,
+				5A627B771D6EAB77002ADCE7 /* UserTableViewCell.swift */,
 				5A627B711D6E9E12002ADCE7 /* Response+ObjectMapper.swift */,
 				5A627B731D6EA165002ADCE7 /* Observable+ObjectMapper.swift */,
 				5A627B751D6EA9D6002ADCE7 /* RequestObjectMapper.swift */,
+			);
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		5A887A3E1D6C51BA00A0150D /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				5A627B811D6EEC14002ADCE7 /* SupportFile */,
+				5A627B7A1D6EDD14002ADCE7 /* Moya */,
+				5A627B791D6EDCFB002ADCE7 /* Alamofire */,
 			);
 			name = NetWorking;
 			sourceTree = "<group>";
@@ -438,6 +468,7 @@
 				5A92811A1D5B348F002D9BB8 /* BasicTableViewCell.swift in Sources */,
 				5A9280E21D5B1D8B002D9BB8 /* ViewController.swift in Sources */,
 				5A9281111D5B29BA002D9BB8 /* RXTableViewCell.swift in Sources */,
+				5A627B7C1D6EDD2D002ADCE7 /* UserAPI.swift in Sources */,
 				5A627B761D6EA9D6002ADCE7 /* RequestObjectMapper.swift in Sources */,
 				5A9281131D5B2A95002D9BB8 /* RxViewModel.swift in Sources */,
 				5A627B741D6EA165002ADCE7 /* Observable+ObjectMapper.swift in Sources */,
@@ -447,6 +478,7 @@
 				5A887A401D6C5C9900A0150D /* AlamofireViewController.swift in Sources */,
 				5A627B781D6EAB77002ADCE7 /* UserTableViewCell.swift in Sources */,
 				5A627B721D6E9E12002ADCE7 /* Response+ObjectMapper.swift in Sources */,
+				5A627B801D6EE151002ADCE7 /* MoyaTableViewController.swift in Sources */,
 				5A887A491D6E962A00A0150D /* UserModel.swift in Sources */,
 				5A9281161D5B30A0002D9BB8 /* RxTableViewController2.swift in Sources */,
 				5A887A3D1D6AA22900A0150D /* UITestViewController.swift in Sources */,

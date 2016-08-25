@@ -8,5 +8,6 @@ target 'RxSwiftDemo' do
   pod 'RxAlamofire'
   pod 'Then'
   pod 'Moya'
+  pod 'Moya/RxSwift'
   pod 'ObjectMapper'
 end
