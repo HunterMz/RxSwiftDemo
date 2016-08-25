@@ -31,8 +31,15 @@ class SectionsTableViewController: UITableViewController {
         tableView.dataSource = nil
         tableView.delegate = nil
         
-        tableView.registerClass(SectionsTableViewCell.self, forCellReuseIdentifier: "SectionsCell")
+//        tableView.registerClass(SectionsTableViewCell.self, forCellReuseIdentifier: "SectionsCell")
         let tvDataSource = RxTableViewSectionedReloadDataSource<TableSectionModel>()
+        
+        
+        sections.asObservable()
+            .bindTo(tableView.rx_itemsWithDataSource(tvDataSource))
+            .addDisposableTo(disposeBag)
+        
+        sections.value = [TableSectionModel(model: "", items: SectionsTableViewController.initialValue)]
         
         tvDataSource.configureCell = { (_, tv, ip, i) in
             let cell = tv.dequeueReusableCellWithIdentifier("SectionsCell") as! SectionsTableViewCell
@@ -40,12 +47,7 @@ class SectionsTableViewController: UITableViewController {
             cell.ageLabel.text = String(i.age)
             return cell
         }
-        
-        sections.asObservable()
-            .bindTo(tableView.rx_itemsWithDataSource(tvDataSource))
-            .addDisposableTo(disposeBag)
-        
-        sections.value = [TableSectionModel(model: "", items: SectionsTableViewController.initialValue)]
+
         
         tableView.rx_modelSelected(SectionsModel)
             .subscribeNext {

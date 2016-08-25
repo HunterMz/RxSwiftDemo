@@ -28,7 +28,7 @@ class RxTableViewController2: UITableViewController {
         tableView.dataSource = nil
         tableView.delegate = nil
         
-        tableView.registerClass(BasicTableViewCell.self, forCellReuseIdentifier: "BasicCell")
+//        tableView.registerClass(BasicTableViewCell.self, forCellReuseIdentifier: "BasicCell")
         
         
         dataSource.asObservable()

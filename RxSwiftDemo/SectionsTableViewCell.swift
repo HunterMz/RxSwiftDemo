@@ -11,25 +11,30 @@ import Then
 
 class SectionsTableViewCell: UITableViewCell {
     
-    let nameLabel: UILabel = UILabel().then {
-        $0.frame = CGRect(x: 20,y: 5,width: 50,height: 20)
-        $0.textColor = UIColor.greenColor()
-    }
+    @IBOutlet weak var nameLabel: UILabel!
     
-    let ageLabel: UILabel = UILabel().then {
-        $0.frame = CGRect(x: 200,y: 5,width: 50,height: 20)
-    }
+    @IBOutlet weak var ageLabel: UILabel!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        self.contentView.addSubview(nameLabel)
-        self.contentView.addSubview(ageLabel)
-        
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    let nameLabel: UILabel = UILabel().then {
+//        $0.frame = CGRect(x: 20,y: 5,width: 50,height: 20)
+//        $0.textColor = UIColor.greenColor()
+//    }
+//    
+//    let ageLabel: UILabel = UILabel().then {
+//        $0.frame = CGRect(x: 200,y: 5,width: 50,height: 20)
+//    }
+    
+//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//        
+//        self.contentView.addSubview(nameLabel)
+//        self.contentView.addSubview(ageLabel)
+//        
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
 
 }
