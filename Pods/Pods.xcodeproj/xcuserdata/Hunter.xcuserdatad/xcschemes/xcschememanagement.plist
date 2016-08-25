@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RxSwiftDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,22 +57,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2504D0F66B24E57B2F789906CC83523C</key>
+		<key>1BF4345B0350661D9A0F8A7E874CC468</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>502DD0201B17507DE67F6EAA6510E0AA</key>
+		<key>4828CEB348A3C8483DA0CCBB01B7D1FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55F4FBA0A47479F5D2F5F1097196F6DD</key>
+		<key>5CD8E828C7983529EA9616FEB8F31C38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6ECC1AFEF69378AA4F4957CBA2080BCB</key>
+		<key>789C6064AF34B27180B5ECC248D020B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78C33D52F7E2D591E77871DBB03E8468</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D75271946E3C7E254E2BD1B950E4259</key>
+		<key>D58CAD74411F3EA5D73A48FFB3DC29A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8D0D63BABCBBE072BC911F4CEE73B0E</key>
+		<key>D5D6200D4BE741574DBD4FB768A6F55B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1662D5561A2AFEC3F2437D8F194999F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC10EF3035F29E90D829215D53E94950</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,4 +7,6 @@ target 'RxSwiftDemo' do
   pod 'RxDataSources', '~> 0.9'
   pod 'RxAlamofire'
   pod 'Then'
+  pod 'Moya'
+  pod 'ObjectMapper'
 end

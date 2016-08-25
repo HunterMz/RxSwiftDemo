@@ -435,6 +435,29 @@
                                             <segue destination="wsP-WE-uq0" kind="show" id="lna-lD-f8N"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kdr-pN-A2h">
+                                        <rect key="frame" x="0.0" y="196" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdr-pN-A2h" id="CJ6-nH-Ga4">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NetWorking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdV-aM-BFv">
+                                                    <rect key="frame" x="238" y="11" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gdV-aM-BFv" firstAttribute="centerX" secondItem="CJ6-nH-Ga4" secondAttribute="centerX" id="bZF-7C-L0y"/>
+                                                <constraint firstItem="gdV-aM-BFv" firstAttribute="centerY" secondItem="CJ6-nH-Ga4" secondAttribute="centerY" id="iO2-lj-ybs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FC1-Tu-va8" kind="show" id="9vp-70-b2T"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -448,6 +471,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpZ-7z-qYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353" y="451"/>
+        </scene>
+        <!--Alamofire View Controller-->
+        <scene sceneID="Iak-8d-l5V">
+            <objects>
+                <tableViewController id="FC1-Tu-va8" customClass="AlamofireViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zH4-pC-F0b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="FAy-Mb-yPu" customClass="UserTableViewCell" customModule="RxSwiftDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAy-Mb-yPu" id="kEp-dd-Mhg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-vp-9fY">
+                                            <rect key="frame" x="20" y="11" width="43" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTF-Cn-otl">
+                                            <rect key="frame" x="551" y="11" width="29" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Mxp-vp-9fY" firstAttribute="top" secondItem="kEp-dd-Mhg" secondAttribute="top" constant="11" id="7vy-UD-Xqm"/>
+                                        <constraint firstAttribute="trailing" secondItem="RTF-Cn-otl" secondAttribute="trailing" constant="20" id="LGO-sY-oLD"/>
+                                        <constraint firstAttribute="bottom" secondItem="RTF-Cn-otl" secondAttribute="bottom" constant="11" id="MF5-C5-3ho"/>
+                                        <constraint firstItem="Mxp-vp-9fY" firstAttribute="leading" secondItem="kEp-dd-Mhg" secondAttribute="leading" constant="20" id="eg9-Cf-CSZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mxp-vp-9fY" secondAttribute="bottom" constant="11" id="ja6-0N-uBX"/>
+                                        <constraint firstItem="RTF-Cn-otl" firstAttribute="top" secondItem="kEp-dd-Mhg" secondAttribute="top" constant="11" id="oHD-8H-JQa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ageLabel" destination="RTF-Cn-otl" id="1kO-6r-u7l"/>
+                                    <outlet property="nameLabel" destination="Mxp-vp-9fY" id="Xp3-eW-utJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FC1-Tu-va8" id="jY4-6Q-b8d"/>
+                            <outlet property="delegate" destination="FC1-Tu-va8" id="mqW-tr-pri"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTi-dh-z1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="1193"/>
         </scene>
     </scenes>
 </document>
