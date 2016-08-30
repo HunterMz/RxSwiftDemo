@@ -40,7 +40,7 @@ class UITestViewController: UIViewController {
 //                alertViewController.addAction(cancelAction);
 //                alertViewController.addAction(okAction);
                 
-                let alertViewController = UIAlertController(title: nil, message: "试试就试试", preferredStyle: .Alert).then {
+                let alertViewController: UIAlertController = UIAlertController(title: nil, message: "试试就试试", preferredStyle: .Alert).then {
                     $0.addAction(UIAlertAction(title: "不敢试了😂", style: .Cancel, handler: nil ))
                     $0.addAction(UIAlertAction(title: "还想试试😈", style: .Default, handler: nil))
                 }

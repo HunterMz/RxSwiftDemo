@@ -20,6 +20,22 @@ class OperatorsViewController: UIViewController {
         super.viewDidLoad()
 
         combineLatest()
+        let disposeBag = DisposeBag()
+        let behaviorSubject = BehaviorSubject(value: "z")
+        behaviorSubject.subscribe { e in
+            print("Subscription: 1, event: \(e)")
+            }.addDisposableTo(disposeBag)
+        
+        behaviorSubject.on(.Next("a"))
+        behaviorSubject.on(.Next("b"))
+        
+        behaviorSubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
+            print("Subscription: 2, event: \(e)")
+            }.addDisposableTo(disposeBag)
+        
+        behaviorSubject.on(.Next("c"))
+        behaviorSubject.on(.Next("d"))
+        behaviorSubject.on(.Completed)
     }
 }
 

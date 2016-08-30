@@ -30,7 +30,6 @@ class RxTableViewController2: UITableViewController {
         
 //        tableView.registerClass(BasicTableViewCell.self, forCellReuseIdentifier: "BasicCell")
         
-        
         dataSource.asObservable()
             .bindTo(tableView.rx_itemsWithCellIdentifier("BasicCell", cellType: BasicTableViewCell.self)) { (_, element, cell) in
                 cell.nameLabel.text = element.name
