@@ -18,24 +18,8 @@ class OperatorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        combineLatest()
-        let disposeBag = DisposeBag()
-        let behaviorSubject = BehaviorSubject(value: "z")
-        behaviorSubject.subscribe { e in
-            print("Subscription: 1, event: \(e)")
-            }.addDisposableTo(disposeBag)
         
-        behaviorSubject.on(.Next("a"))
-        behaviorSubject.on(.Next("b"))
         
-        behaviorSubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
-            print("Subscription: 2, event: \(e)")
-            }.addDisposableTo(disposeBag)
-        
-        behaviorSubject.on(.Next("c"))
-        behaviorSubject.on(.Next("d"))
-        behaviorSubject.on(.Completed)
     }
 }
 
@@ -197,6 +181,25 @@ extension OperatorsViewController {
         }
     }
     
+    func behaviorTest() {
+
+        let disposeBag = DisposeBag()
+        let behaviorSubject = BehaviorSubject(value: "z")
+        behaviorSubject.subscribe { e in
+            print("Subscription: 1, event: \(e)")
+            }.addDisposableTo(disposeBag)
+        
+        behaviorSubject.on(.Next("a"))
+        behaviorSubject.on(.Next("b"))
+        
+        behaviorSubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
+            print("Subscription: 2, event: \(e)")
+            }.addDisposableTo(disposeBag)
+        
+        behaviorSubject.on(.Next("c"))
+        behaviorSubject.on(.Next("d"))
+        behaviorSubject.on(.Completed)
+    }
     func variableTest() {
         example("Variable") {
             let disposeBag = DisposeBag()
@@ -219,6 +222,21 @@ extension OperatorsViewController {
                 .map { $0 * $0 }
                 .subscribeNext { print($0) }
                 .addDisposableTo(disposeBag)
+        }
+    }
+    
+    func flatMapTest() {
+        example("flatMap") {
+            let sequenceInt = Observable.of(1, 2, 3)
+            let sequenceString = Observable.of("A", "B", "--")
+            
+            sequenceInt
+                .flatMap { int in
+                    sequenceString
+                }
+                .subscribe {
+                    print($0)
+            }
         }
     }
     
