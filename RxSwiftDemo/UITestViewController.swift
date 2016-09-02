@@ -25,6 +25,7 @@ class UITestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstNumber.isFirstResponder()
         
         Observable.combineLatest(firstNumber.rx_text, secondNumber.rx_text) { String(($0 as NSString).intValue + ($1 as NSString).intValue)}
             .bindTo(resultNumber.rx_text)

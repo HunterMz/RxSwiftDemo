@@ -24,6 +24,7 @@ class MoyaTableViewController: UITableViewController {
         tableView.dataSource = nil
         tableView.delegate = nil
         
+        // Turn your data into an Observable sequence
         let tvDataSources = RxTableViewSectionedReloadDataSource<MoyaSectionModel>()
         
         tvDataSources.configureCell = { (_, tv, indexPath, model) in

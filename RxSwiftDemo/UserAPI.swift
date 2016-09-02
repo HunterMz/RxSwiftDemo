@@ -16,6 +16,7 @@ public enum UserAPI {
     case Users
 }
 extension UserAPI: TargetType {
+    
     public var baseURL: NSURL {
         return NSURL(string: host)!
     }

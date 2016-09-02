@@ -12,6 +12,8 @@ import RxCocoa
 
 class OperatorsViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+    
     @IBOutlet weak var firstTextfield: UITextField!
     
     @IBOutlet weak var secondTextfield: UITextField!
@@ -19,7 +21,7 @@ class OperatorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        emptyTest()
     }
 }
 
@@ -36,7 +38,6 @@ extension OperatorsViewController {
     }
     
     func emptyTest() {
-        let disposeBag = DisposeBag()
         Observable<Int>.empty()
             .subscribe { event in
                 print(event)
@@ -49,7 +50,6 @@ extension OperatorsViewController {
     func neverTest() {
         
         example("neverTest") {
-            let disposeBag = DisposeBag()
             let neverSequence = Observable<String>.never()
             
             let neverSequenceSubscription = neverSequence
@@ -58,7 +58,6 @@ extension OperatorsViewController {
             }
             
             neverSequenceSubscription.addDisposableTo(disposeBag)
-        
         }
     }
     
@@ -79,12 +78,12 @@ extension OperatorsViewController {
     ///  有 Bug
     func fromTest() {
         example("from") { (_) in
-            let disposeBag = DisposeBag()
             var array = Array<Int>()
             array.append(1)
             array.append(2)
             array.append(3)
             print(array)
+            
             let fromSequence = Variable(array)
             let subscription = fromSequence.asObservable()
                 .subscribe{ event in
@@ -96,7 +95,6 @@ extension OperatorsViewController {
     
     func createTest() {
         example("from") {
-            let disposeBag = DisposeBag()
             let myJust = { (element: String) -> Observable<String> in
                 return Observable.create({ (observer) -> Disposable in
                     observer.on(.Next(element))
@@ -104,6 +102,7 @@ extension OperatorsViewController {
                     return NopDisposable.instance
                 })
             }
+            
             myJust("haha").subscribe { (event) in
                 print(event)
             }.addDisposableTo(disposeBag)
@@ -112,7 +111,6 @@ extension OperatorsViewController {
     
     func deferredTest() {
         example("deferred") {
-            let disposeBag = DisposeBag()
             var count = 1
             let deferredSequence = Observable<String>.deferred({ () -> Observable<String> in
                 print("Creating\(count)")
@@ -139,20 +137,16 @@ extension OperatorsViewController {
     
     func toObserverTest() {
         example("toObserver") {
-            let disposeBag = DisposeBag()
             
             ["🐶", "🐱", "🐭", "🐹"].toObservable()
                 .subscribeNext { print($0) }
                 .addDisposableTo(disposeBag)
-
         }
     }
     
     func publishSubject() {
         example("publishSubject") {
-            let disposeBag = DisposeBag()
             let subject = PublishSubject<String>()
-            
             
             subject.addObserver("1").addDisposableTo(disposeBag)
             subject.onNext("🐶")
@@ -167,7 +161,6 @@ extension OperatorsViewController {
     
     func ReplaySubjectTest() {
         example("ReplaySubjecrt") {
-            let disposeBag = DisposeBag()
             let subject = ReplaySubject<String>.create(bufferSize: 2)
             
             subject.addObserver("1").addDisposableTo(disposeBag)
@@ -183,7 +176,6 @@ extension OperatorsViewController {
     
     func behaviorTest() {
 
-        let disposeBag = DisposeBag()
         let behaviorSubject = BehaviorSubject(value: "z")
         behaviorSubject.subscribe { e in
             print("Subscription: 1, event: \(e)")
@@ -202,7 +194,6 @@ extension OperatorsViewController {
     }
     func variableTest() {
         example("Variable") {
-            let disposeBag = DisposeBag()
             let variable = Variable("🔴")
             
             variable.asObservable().addObserver("1").addDisposableTo(disposeBag)
@@ -217,7 +208,6 @@ extension OperatorsViewController {
     
     func mapTest() {
         example("map") {
-            let disposeBag = DisposeBag()
             Observable.of(1, 2, 3)
                 .map { $0 * $0 }
                 .subscribeNext { print($0) }
@@ -236,13 +226,12 @@ extension OperatorsViewController {
                 }
                 .subscribe {
                     print($0)
-            }
+            }.addDisposableTo(disposeBag)
         }
     }
     
     func scanTest() {
         example("scan") {
-            let disposeBag = DisposeBag()
             
             Observable.of(10, 100, 1000)
                 .scan(1) { aggregateValue, newValue in
@@ -255,7 +244,7 @@ extension OperatorsViewController {
     
     func filterTest() {
         example("filter") { (_) in
-            let disposeBag = DisposeBag()
+
             Observable.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
             .filter({ (element) -> Bool in
                 element % 2 == 0
@@ -268,7 +257,7 @@ extension OperatorsViewController {
     
     func zipTest() {
         example("zip 1") {
-            let disposeBag = DisposeBag()
+
             let stringSubject = PublishSubject<String>()
             let intSubject = PublishSubject<Int>()
             
@@ -288,7 +277,7 @@ extension OperatorsViewController {
     
     func merge() {
         example("merge 1") {
-            let disposeBag = DisposeBag()
+
             let subject1 = PublishSubject<Int>()
             let subject2 = PublishSubject<Int>()
             Observable.of(subject1, subject2)
@@ -307,7 +296,6 @@ extension OperatorsViewController {
     func retryTest() {
         example("retry") {
             
-            let disposeBag = DisposeBag()
             var count = 1 // bad practice, only for example purposes
             let funnyLookingSequence: Observable<Int> = Observable.create { observer in
                 let error = NSError(domain: "Test", code: 0, userInfo: nil)
@@ -331,7 +319,7 @@ extension OperatorsViewController {
     
     func doOnTest() {
         example("doOn") {
-            let disposeBag = DisposeBag()
+
             let sequenceOfInts = PublishSubject<Int>()
             sequenceOfInts
                 .doOn {
@@ -347,7 +335,7 @@ extension OperatorsViewController {
     
     func reduceTest() {
         example("reduce") {
-            let disposeBag = DisposeBag()
+
             Observable.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
                 .reduce(0, accumulator: +)
                 .subscribe {
@@ -357,6 +345,7 @@ extension OperatorsViewController {
     }
     
     func combineLatest() {
+        
         let firstObserverable = firstTextfield.rx_text.map({"first" + $0})
         let secondObserverable = secondTextfield.rx_text.filter({$0.characters.count > 3})
         _ =  Observable.combineLatest(firstObserverable, secondObserverable, resultSelector:{ ($0 + $1,$0.characters.count + $1.characters.count)}).subscribeNext { (element) in

@@ -354,6 +354,7 @@
 				TargetAttributes = {
 					5A9280DB1D5B1D8B002D9BB8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZS97J2PFPF;
 					};
 					5A9280EF1D5B1D8B002D9BB8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -627,11 +628,14 @@
 			baseConfigurationReference = 23D220A55295C55559031994 /* Pods-RxSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huner.demo.RxSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huner.demo.RxSwiftDemo0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -640,11 +644,14 @@
 			baseConfigurationReference = F3D80C9DC650B1BAA77E96E6 /* Pods-RxSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huner.demo.RxSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huner.demo.RxSwiftDemo0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
